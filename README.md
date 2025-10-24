@@ -5,9 +5,9 @@
 This Codespace provides a ready-to-use synthesis and timing analysis setup on **Ubuntu 22.04**, with both **terminal** and **GUI (noVNC)** access. 
 
 ## Note-
-# 1) Create a GitHub account by signing-up using this link https://github.com/ 
-# 2) If you already have a github account, continue with Step 1 
-# 3) The first-time setup will take about 20-30min
+### 1) Create a GitHub account by signing-up using this link https://github.com/ 
+### 2) If you already have a github account, continue with Step 1 
+### 3) The first-time setup will take about 20-30min
 
 ---
 
