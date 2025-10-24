@@ -6,7 +6,7 @@ This Codespace provides a ready-to-use synthesis and timing analysis setup on **
 
 ## Note-
 ### 1) Create a GitHub account by signing-up using this link https://github.com/ 
-### 2) If you already have a github account, continue with Step 1 
+### 2) If you already have a github account, continue with below Step 1 - Open the Codespace
 ### 3) The first-time setup will take about 20-30min
 
 ---
