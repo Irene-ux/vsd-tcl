@@ -34,14 +34,23 @@ ENV LD_LIBRARY_PATH="/usr/lib:${LD_LIBRARY_PATH:-}"
 # Yosys (build from source)
 # -----------------------------
  
-WORKDIR /opt
-RUN git clone https://github.com/YosysHQ/yosys.git && \
-    cd yosys && \
-    git submodule update --init --recursive && \
-    make config-gcc && \
-    make -j"$(nproc)" && \
-    make install && \
-    echo "✅ Yosys installed successfully"
+#WORKDIR /opt
+#RUN git clone https://github.com/YosysHQ/yosys.git && \
+#    cd yosys && \
+#    git submodule update --init --recursive && \
+#    make config-gcc && \
+#    make -j"$(nproc)" && \
+#    make install && \
+#    echo "✅ Yosys installed successfully"
+
+# OSS CAD Suite (Yosys, etc.)
+RUN set -eux; \
+  curl -L https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2025-10-31/oss-cad-suite-linux-x64-20251031.tgz \
+    -o /tmp/oss-cad.tgz; \
+  mkdir -p /opt && tar -xzf /tmp/oss-cad.tgz -C /opt; \
+  ln -s /opt/oss-cad-suite /opt/oss-cad; \
+  rm /tmp/oss-cad.tgz
+ENV PATH="/opt/oss-cad/bin:${PATH}"
 
 # -----------------------------
 # noVNC desktop (supervisor)
